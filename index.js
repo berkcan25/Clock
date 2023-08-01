@@ -5,14 +5,7 @@ const formatTypes = ["YYYY-MM-DD", "MM-DD-YYYY", "DD-MM-YYYY", "Month DD, YYYY",
 window.requestAnimationFrame(updateTime);
 function updateTime() {
     const date = new Date(Date.now());
-    const hour = date.getHours();
-    const minute = date.getMinutes();
-    const second = date.getSeconds();
-    let hourStr, minuteStr, secondStr;
-    hour < 10 ? hourStr = "0" + hour.toString() : hourStr = hour.toString();
-    minute < 10 ? minuteStr = "0" + minute.toString() : minuteStr = minute.toString();
-    second < 10 ? secondStr = "0" + second.toString() : secondStr = second.toString();
-    timeContainer.innerHTML = `${hourStr}:${minuteStr}:${secondStr}`;
+    timeContainer.innerHTML = formatTime(date, false);
     dateContainer.innerHTML = formatDate(date, "DD-MM-YYYY");
     window.requestAnimationFrame(updateTime);
 }
@@ -49,4 +42,19 @@ function formatDate(date, format) {
         formattedDate = `${year}-${month + 1}-${day}`;
     }
     return formattedDate;
+}
+function formatTime(date, is12Hour) {
+    let hour = date.getHours();
+    let amPM = "";
+    if (is12Hour) {
+        hour < 12 ? amPM = "AM" : amPM = "PM";
+        hour %= 12;
+    }
+    const minute = date.getMinutes();
+    const second = date.getSeconds();
+    let hourStr, minuteStr, secondStr;
+    hour < 10 ? hourStr = "0" + hour.toString() : hourStr = hour.toString();
+    minute < 10 ? minuteStr = "0" + minute.toString() : minuteStr = minute.toString();
+    second < 10 ? secondStr = "0" + second.toString() : secondStr = second.toString();
+    return `${hourStr}:${minuteStr}:${secondStr}${amPM}`;
 }
