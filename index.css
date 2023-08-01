@@ -1,0 +1,19 @@
+body{
+    background-color: darkslateblue;
+    color: aliceblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-container {
+    font-size:15vw;
+}
+
+.date-container {
+    font-size: 5vw;
+}
