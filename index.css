@@ -17,3 +17,54 @@ body{
 .date-container {
     font-size: 5vw;
 }
+
+.analog-clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    aspect-ratio: 1;
+    max-width: 90vh;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.center {
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+    aspect-ratio: 1;
+    width: 5%;
+    height: auto;
+}
+
+.hour-hand {
+    background-color: black;
+    position: absolute;
+    top: 15%;
+    transform-origin: bottom;
+    rotate: -60deg;
+    height: 35%;
+    width: 4%;
+}
+.minute-hand {
+    background-color: black;
+    position: absolute;
+    top: 10%;
+    transform-origin: bottom;
+    rotate: 50deg;
+    height: 40%;
+    width: 3%;
+}
+.second-hand {
+    background-color: red;
+    position: absolute;
+    top: 10%;
+    transform-origin: bottom;
+    rotate: 180deg;
+    height: 40%;
+    width: 2%;
+}
