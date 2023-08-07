@@ -1,12 +1,30 @@
-"use strict";
+import updateClock from "./analogClock.js";
+const analogClock = document.getElementsByClassName("analog-clock")[0];
+const digitalClock = document.getElementsByClassName("digital-clock")[0];
 const timeContainer = document.getElementsByClassName("time-container")[0];
 const dateContainer = document.getElementsByClassName("date-container")[0];
 const formatTypes = ["YYYY-MM-DD", "MM-DD-YYYY", "DD-MM-YYYY", "Month DD, YYYY", "DD Month, YYYY"];
+const use12hour = localStorage.getItem("is12Hour");
+const useAnalog = localStorage.getItem("isAnalog");
 window.requestAnimationFrame(updateTime);
+if (useAnalog === "true") {
+    analogClock.style.width = "70vw";
+    analogClock.style.visibility = "visible";
+    digitalClock.style.visibility = "hidden";
+}
+else {
+    analogClock.style.height = "0";
+    analogClock.style.visibility = "hidden";
+}
 function updateTime() {
     const date = new Date(Date.now());
-    timeContainer.innerHTML = formatTime(date, false);
-    dateContainer.innerHTML = formatDate(date, "DD-MM-YYYY");
+    if (useAnalog === "true") {
+        updateClock(date);
+    }
+    else {
+        use12hour == "true" ? timeContainer.innerHTML = formatTime(date, true) : timeContainer.innerHTML = formatTime(date, false);
+        dateContainer.innerHTML = formatDate(date, "DD Month, day, YYYY");
+    }
     window.requestAnimationFrame(updateTime);
 }
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
