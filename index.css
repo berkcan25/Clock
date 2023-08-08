@@ -29,6 +29,7 @@ body{
     width: auto;
     height: auto;
     border-radius: 50%;
+    border: 15px solid black;
     background-color: white;
 }
 
@@ -68,3 +69,109 @@ body{
     height: 40%;
     width: 2%;
 }
+
+.hour-marker {
+    background-color: black;
+    position: absolute;
+    transform-origin: bottom;
+    height: 50%;
+    width: 4%;
+    top: 0%;
+}
+
+#hour1 {
+    rotate: 30deg;
+}
+#hour2 {
+    rotate: 60deg;
+}
+#hour3 {
+    rotate: 90deg;
+}
+#hour4 {
+    rotate: 120deg;
+}
+#hour5 {
+    rotate: 150deg;
+}
+#hour6 {
+    rotate: 180deg;
+}
+#hour7 {
+    rotate: 210deg;
+}
+#hour8 {
+    rotate: 240deg;
+}
+#hour9 {
+    rotate: 270deg;
+}
+#hour10 {
+    rotate: 300deg;
+}
+#hour11 {
+    rotate: 330deg;
+}
+#hour12 {
+    rotate: 360deg;
+}
+
+
+
+.clipping-hour {
+    background-color: white;
+    position: absolute;
+    transform-origin: bottom;
+    height: 35%;
+    width: 5%;
+    bottom: 50%;
+}
+
+#clipping1 {
+    rotate: 30deg;
+}
+#clipping2 {
+    rotate: 60deg;
+}
+#clipping3 {
+    rotate: 90deg;
+}
+#clipping4 {
+    rotate: 120deg;
+}
+#clipping5 {
+    rotate: 150deg;
+}
+#clipping6 {
+    rotate: 180deg;
+}
+#clipping7 {
+    rotate: 210deg;
+}
+#clipping8 {
+    rotate: 240deg;
+}
+#clipping9 {
+    rotate: 270deg;
+}
+#clipping10 {
+    rotate: 300deg;
+}
+#clipping11 {
+    rotate: 330deg;
+}
+#clipping12 {
+    rotate: 360deg;
+}
+
+
+
+
+
+
+
+
+
+
+
+
