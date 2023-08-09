@@ -6,7 +6,7 @@ export default function updateClock(date: Date) {
     const hour = date.getHours()
     const minute = date.getMinutes()
     const second = date.getSeconds()
-    const hourHandPos = 360 / (12 / hour)
+    const hourHandPos = 360 / (12 / hour) + (30*(minute % 60/60))
     const minHandPos = 360 / (60 / minute)
     const secHandPos = 360 / (60 / second)
     hourHand.style.rotate = hourHandPos + "deg"
