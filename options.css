@@ -1,0 +1,55 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.homeBtn a,
+.time-format button,
+.clock-design button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #25124a;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.homeBtn a:hover,
+.time-format button:hover,
+.clock-design button:hover {
+    background-color: #7345cf;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Additional styles to ensure consistency with index.css elements */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #25124a;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Example style for active buttons, if needed */
+button.active {
+    background-color: #008cba;
+}

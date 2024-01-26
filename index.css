@@ -1,6 +1,9 @@
-body{
-    background-color: darkslateblue;
+body {
+    background-color: #25124a;
     color: aliceblue;
+    font-family: 'Arial', sans-serif;
+    color: snow;
+
 }
 
 .container {
@@ -164,14 +167,27 @@ body{
     rotate: 360deg;
 }
 
+.optionsBtn  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.5em;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #e1d3ff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
+.optionsBtn a {
+    color: #000000;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
-
-
-
+.optionsBtn:hover {
+    background-color: #c1a4ff;
+}
